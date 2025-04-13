@@ -77,7 +77,7 @@ def apply_for_leave(driver, start_date, start_time, end_date, end_time, destinat
             time.sleep(0.5)
         
         def select_time_with_picker(field_id, time_str):
-            my=0
+          
             # Parse target time (format: "18:00")
             
             target_hour, target_minute = map(int, time_str.split(':'))
@@ -86,9 +86,9 @@ def apply_for_leave(driver, start_date, start_time, end_date, end_time, destinat
 
             time_field = wait.until(EC.element_to_be_clickable((By.ID, field_id)))
             time_field.click()
-            print("clicked bro")
+          
             time.sleep(1)
-            print("after sleep")
+         
             
             # Wait for timepicker to appear
 
