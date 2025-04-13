@@ -155,6 +155,7 @@ def apply_for_leave(driver, start_date, start_time, end_date, end_time, destinat
         #Fill Reason
 
         if(len(leave_reason)<20):
+             driver.execute_script("alert('Leave length is less than 20');")
              return "reason length should be grater than 20"
         rsn = driver.find_element(By.ID, "txtLeaveReason")
         rsn.send_keys(Keys.CONTROL + "a")
@@ -168,6 +169,7 @@ def apply_for_leave(driver, start_date, start_time, end_date, end_time, destinat
         time.sleep(2)
 
         print(" Leave applied successfully!")
+        driver.execute_script("alert('Leave applied successfully!');")
 
     except Exception as e:
         print(f" Error applying leave: {str(e)}")

@@ -2,6 +2,10 @@ from login import login_to_erp
 from apply_leave import apply_for_leave
 from dotenv import load_dotenv
 import os
+import time
+
+ # Keeps browser open for 5 minutes (300 seconds)
+
 from leave_data import leave
 
 load_dotenv()
@@ -19,3 +23,4 @@ if __name__ == "__main__":
 )
 
     print(warning)
+    time.sleep(40) 
